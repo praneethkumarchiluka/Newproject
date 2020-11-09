@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Login</title>
+</head>
+<body>
+<h3 id="form-title">LOGIN</h3>
+<form method="POST" action=" ">
+{% csrf_token %}
+<input type="text" name="username" placeholder="Username..." ><br><br>
+<input type="password" name="password" placeholder="Password..." ><br><br>
+<input class="btn login_btn" type="submit" value="Login"> <br><br>
+</form>
+<a href="{% url 'users:register' %}" class="ml-2">Sign Up</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+<body>  
+{% if user.is_authenticated %}
+{% csrf_token %}
+<center><h1>Welcome {{request.user}}</h1> </center>  
+<br>
+<a class="hello-msg" href="{% url 'users:logout' %}">Logout</a>
+            {% else %}
+            <p>
+            <center><h1>Welcome Please Login to See check</h1> </center>
+            <a href="{% url "users:login" %}" class="btn btn-primary my-2">Login</a>
+                
+            </p>
+{% endif %}
+</body>  
+</html>  
+
+
+
+
+
